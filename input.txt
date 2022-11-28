@@ -1,0 +1,10 @@
+NumberFCCUnits                      3                       # Number of FCC unit cells in each direction in the supercell
+ReducedDensity                      0.8442                  # Reduced density (adimensional)
+ReducedTemperature                  0.722                   # Reduced temperature (adimensional)
+Sigma                               0.341   nm              # Parameter sigma   of the Lennard-Jones potential
+Epsilon                             119.8   K               # Parameter epsilon of the Lennard-Jones potential
+CutoffPotential                     2.5                     # Cutoff distance for truncation of intermolecular potential (in units of sigma)
+CutoffList                          2.7                     # Cutoff distance for the computation of Verlet neighbour list (in units of sigma)
+NumberOfSteps                       10                    # Number of steps in the Molecular Dynamic simulations
+ReducedTimeStep                     0.005                   # Reduced time step
+WidthBinPairDistributionFunction    0.1                     # Width of the bins in the histogram to compute the pair distribution function
