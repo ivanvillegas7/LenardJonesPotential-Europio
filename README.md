@@ -1,4 +1,4 @@
-# SolidMelting-Europio
+# Solid Melting - Europio
 
 This project simulates the melting of a solid under a Lennard-Jones potential.
 
