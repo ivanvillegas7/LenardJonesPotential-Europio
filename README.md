@@ -1,6 +1,6 @@
-# Solid Melting - Europio
+# Interacting gas - Europio
 
-This project simulates the melting of a solid under a Lennard-Jones potential.
+This project simulates the interactions of a gas under a Lennard-Jones potential.
 
 To run the simulation, download the files y folder "Code" and store it with a file named "input.txt" in the same Python project. Run the main code and the simulation will run.
 
