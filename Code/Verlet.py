@@ -120,11 +120,16 @@ def verlet_algorithm(N_atoms, x, y, z, vx, vy, vz, Fx, Fy, Fz, D_Time, point,\
         vy_dt[i] = vy_dt_h[i] + ay_dt[i]*D_Time/2
         vz_dt[i] = vz_dt_h[i] + az_dt[i]*D_Time/2
     
+    '''
+    #We can save the position of each atom at every instance to make sure the
+    #programm works. We have disabled this option to optimise the program.
+    
     #Print the positions at every instance
     
     with open('Positions_in_each_time_step.txt', 'w') as f1:
         f1.write(f'x                      y                         z\n')
         for i in range(108):
             f1.write(f'{x_dt[i]}    {y_dt[i]}    {z_dt[i]}\n')
+    '''
     
     return [x_dt, y_dt, z_dt], [vx_dt, vy_dt, vz_dt], point, Neig_list

@@ -83,7 +83,11 @@ def Neighbour_List(N_atoms: int, Rl: float, Rc:float, N_FCC: int, Sigma: float,\
     LIST: np.array = np.array(LIST)
 
     POINT[N_atoms - 1] = int(i_neighbours)
-
+    
+    '''
+    #We can save the neighbour list of each atom at every instance to make sure
+    #the programm works. We have disabled this option to optimise the program.
+    
     #Save data in a txt file
 
     with open('neighbour_list.txt', 'w') as f:
@@ -101,5 +105,6 @@ def Neighbour_List(N_atoms: int, Rl: float, Rc:float, N_FCC: int, Sigma: float,\
             f.write(f'Index         Distances(Units L=1)\n')
             for i in range(POINT[ind], POINT[ind+1]):
                 f.write(f'{LIST[i]}           {distance[ind][i-POINT[ind+1]]}\n')
+    '''
 
     return POINT, LIST

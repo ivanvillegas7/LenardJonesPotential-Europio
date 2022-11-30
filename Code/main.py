@@ -16,6 +16,8 @@ import matplotlib.pyplot as plt
 """
 We import the functions needed, which are the initial positions and velocities
 of the atoms, the conditions inside the box and the neighbour list.
+
+Every output file or graph will be named 'output_{name}'.
 """
 
 from inputs import txt_converter as inp
@@ -119,7 +121,7 @@ def main():
         
         F_z: List[float] = F[2]
         
-        Et.append(float(E_tot))
+        Et.append(float(E_tot)/(1e-35+9.667887402e-24))#To normalise
         
         Pos_i, Vel_i, POINT, LIST = verlet(N, xt[i_step], yt[i_step], zt[i_step], 
                                            v_xt[i_step], v_yt[i_step], v_zt[i_step], 
@@ -137,9 +139,9 @@ def main():
         
         v_yt.append(Vel_i[1])
         
-        v_zt.append(Vel_i[2])
-        
-    movie = open("movie.txt", "w") #AXSF
+        v_zt.append(Vel_i[2])        
+    
+    movie = open("output_movie.AXSF", "w") #AXSF
         
     for i_atom in range(N):
         
@@ -158,7 +160,7 @@ def main():
     
     plt.xlabel(r'$t$ [s]')
     
-    plt.ylabel(r'$E$ []')
+    plt.ylabel(r'$(10^{-35}+9.667887402*10^{-24})·E$ [$\epsilon$]')
     
     plt.title(r'Conservation of energy')
     
@@ -166,6 +168,6 @@ def main():
     
     plt.grid(True)
     
-    plt.savefig('energy conservation.pdf')
+    plt.savefig('output_energy_conservation.pdf')
     
 main()

@@ -16,8 +16,6 @@ from random import Random
 
 import matplotlib.pyplot as plt
 
-from scipy.stats import norm
-
 def initial_position_FCC(Number_FCC: int, Reduced_temperature: float,\
                          Reduced_density: float, Sigma: float) -> List[np.array]:
     """
@@ -92,7 +90,7 @@ def initial_position_FCC(Number_FCC: int, Reduced_temperature: float,\
     
     #Print a file with the initial positions
     
-    with open('initial_positions.txt', 'w') as f:
+    with open('output_initial_positions.txt', 'w') as f:
             f.write(f'This is a file with the initial positions:\n')
             f.write(f'__________________________________________\n')
         
@@ -195,7 +193,7 @@ def initial_velocities(Number_FCC: int, Reduced_temperature: float,\
     
     plt.legend()
     
-    plt.savefig('velocity_X.pdf')
+    plt.savefig('output_velocity_X.pdf')
     
     plt.figure()
     
@@ -205,7 +203,7 @@ def initial_velocities(Number_FCC: int, Reduced_temperature: float,\
     
     plt.legend()
     
-    plt.savefig('velocity_Y.pdf')
+    plt.savefig('output_velocity_Y.pdf')
     
     plt.figure()
     
@@ -215,11 +213,11 @@ def initial_velocities(Number_FCC: int, Reduced_temperature: float,\
     
     plt.legend()
     
-    plt.savefig('velocity_Z.pdf')
+    plt.savefig('output_velocity_Z.pdf')
     
     #Print a file with the initial velocities
     
-    with open('initial_velocities.txt', 'w') as f:
+    with open('output_initial_velocities.txt', 'w') as f:
         f.write(f'This is a file with the initial velocities:\n')
         f.write(f'___________________________________________\n')
         

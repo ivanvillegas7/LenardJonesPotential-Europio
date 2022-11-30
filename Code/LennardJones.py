@@ -9,6 +9,8 @@ import numpy as np
 
 from typing import List
 
+from scipy.constants import Boltzmann as K_B
+
 def potentials(N, pointer, neighbourlist, x, y, z, r_c, Epsilon, Sigma, v_x, v_y, v_z):
     """
     This function uses the initial positions and velocities of the atoms, the conditions inside the 
@@ -124,10 +126,14 @@ def potentials(N, pointer, neighbourlist, x, y, z, r_c, Epsilon, Sigma, v_x, v_y
     
     for i in range(N):
         velocity[i] = np.sqrt(v_x[i]**2+v_y[i]**2+v_z[i]**2)
-        K[i]        = (velocity[i]**2)/2
+        K[i]        = ((velocity[i]**2)/2)*K_B/Epsilon
         #Total energy
         E[i]        = V[i] + K[i]
         E_tot           = E_tot + E[i]
+    '''
+    #We can save the potential, kinetic and total energy of each atom at every
+    #instance to make sure the programm works. We have disabled this option to
+    #optimise the program.
     
     #We save the potential, kinetic and total energy in .txt files
     with open('potentials.txt', 'w') as pot:
@@ -153,5 +159,6 @@ def potentials(N, pointer, neighbourlist, x, y, z, r_c, Epsilon, Sigma, v_x, v_y
         for i in range(N):
             
             tot.write(f'{i+1}         {E[i]}\n')
+    '''
     
     return F, E_tot

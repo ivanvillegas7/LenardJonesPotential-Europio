@@ -121,8 +121,8 @@ def txt_converter():
                           # Check the units of sigma
                           Sigma_units = words[2]
                           # If it is not in nm and it is in m, transform it.
-                          if Sigma_units.upper() == "M" :
-                              Sigma = Sigma*10**9
+                          if Sigma_units.upper() == "NM" :
+                              Sigma = Sigma*1e-9
                         
                     #REDUCED_DENSITY
                     elif words[0].lower() == "reduceddensity":
@@ -152,14 +152,14 @@ def txt_converter():
     Number_of_atoms = 4 * (Number_FCC)**3
 
     #Print and return of the values 
-    with open('output.txt', 'w') as f:
+    with open('output_conditions.txt', 'w') as f:
         f.write(f'Output file:\n')
         f.write(f'\n')
         f.write(f'Number of FCC units: {Number_FCC}; Number of FCC unit cells in each direction in the supercell\n')
         f.write(f'Which gives us a number of atoms :{Number_of_atoms} \n')
         f.write(f'Reduced density: {Reduced_density}; adimensional\n')
         f.write(f'Reduced temperature: {Reduced_temperature}; adimensional\n')
-        f.write(f'Sigma: {Sigma} nm\n')
+        f.write(f'Sigma: {Sigma} m\n')
         f.write(f'Epsilon: {Epsilon} K\n')
         f.write(f'Cutoff Potential: {CutOffPotential}; in units of sigma\n')
         f.write(f'Cutoff List: {CutOffList}; in units of sigma\n')
