@@ -1,0 +1,12 @@
+Output file:
+
+Number of FCC units: 3; Number of FCC unit cells in each direction in the supercell
+Which gives us a number of atoms :108 
+Reduced density: 0.8442; adimensional
+Reduced temperature: 0.722; adimensional
+Sigma: 3.4100000000000006e-10 m
+Epsilon: 119.8 K
+Cutoff Potential: 2.5; in units of sigma
+Cutoff List: 2.7; in units of sigma
+Number of steps: 10 
+Reduced time step: 0.005 s
