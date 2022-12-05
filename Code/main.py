@@ -149,7 +149,7 @@ def main():
         
         movie = open("output_movie.txt", "a") #AXSF
         
-        movie.write(f'ATOMS {i_step}\n')
+        movie.write(f'ATOMS {i_step+1}\n')
         
         for i_atom in range(N):
             
