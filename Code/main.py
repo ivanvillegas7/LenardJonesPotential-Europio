@@ -110,6 +110,12 @@ def main():
     
     t: List[float] = np.linspace(0, N_steps*R_tStep, N_steps)
     
+    movie = open("output_movie.txt", "w") #AXSF
+    
+    movie.write(f'ANIMSTEPS     {N_steps}\n')
+    
+    movie.close()
+    
     for i_step in range(N_steps):
         
         F, E_tot = pot(N, POINT, LIST, xt[i_step], yt[i_step], zt[i_step], r_c,
@@ -140,14 +146,6 @@ def main():
         v_yt.append(Vel_i[1])
         
         v_zt.append(Vel_i[2])        
-    
-    movie = open("output_movie.txt", "w") #AXSF
-    
-    movie.write(f'ANIMSTEPS     {N_steps}\n')
-    
-    movie.close()
-        
-    for i_step in range(N_steps):
         
         movie = open("output_movie.txt", "a") #AXSF
         
