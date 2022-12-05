@@ -153,7 +153,7 @@ def main():
         
         for i_atom in range(N):
             
-            movie.write(f'{i_atom}     {xt[i_step][i_atom]}     {yt[i_step][i_atom]}  {zt[i_step][i_atom]}\n')
+            movie.write(f'1     {xt[i_step][i_atom]}     {yt[i_step][i_atom]}  {zt[i_step][i_atom]}\n')
             
         movie.close()
     
