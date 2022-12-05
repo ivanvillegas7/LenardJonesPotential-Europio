@@ -141,18 +141,23 @@ def main():
         
         v_zt.append(Vel_i[2])        
     
-    movie = open("output_movie.AXSF", "w") #AXSF
-        
-    for i_atom in range(N):
-        
-        movie.write(f'ATOM {i_atom + 1}\n')
-        
-        for i_step in range(N_steps):
-            
-            movie.write(f'{i_step}     {xt[i_step][i_atom]}\
-                        {yt[i_step][i_atom]}  {zt[i_step][i_atom]}\n')
+    movie = open("output_movie.txt", "w") #AXSF
     
-        movie.write(f'\n')
+    movie.write(f'ANIMSTEPS     {N_steps}\n')
+    
+    movie.close()
+        
+    for i_step in range(N_steps):
+        
+        movie = open("output_movie.txt", "a") #AXSF
+        
+        movie.write(f'ATOMS {i_step}\n')
+        
+        for i_atom in range(N):
+            
+            movie.write(f'{i_atom}     {xt[i_step][i_atom]}     {yt[i_step][i_atom]}  {zt[i_step][i_atom]}\n')
+            
+        movie.close()
     
     plt.figure()
     
