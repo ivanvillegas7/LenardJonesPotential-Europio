@@ -110,7 +110,7 @@ def main():
     
     t: List[float] = np.linspace(0, N_steps*R_tStep, N_steps)
     
-    movie = open("output_movie.txt", "w") #AXSF
+    movie = open("output_movie.AXSF", "w") #AXSF
     
     movie.write(f'ANIMSTEPS     {N_steps}\n')
     
@@ -147,7 +147,7 @@ def main():
         
         v_zt.append(Vel_i[2])        
         
-        movie = open("output_movie.txt", "a") #AXSF
+        movie = open("output_movie.AXSF", "a") #AXSF
         
         movie.write(f'ATOMS {i_step}\n')
         
