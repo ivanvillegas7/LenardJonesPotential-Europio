@@ -110,7 +110,7 @@ def main():
     
     t: List[float] = np.linspace(0, N_steps*R_tStep, N_steps)
     
-    movie = open("output_movie.AXSF", "w") #AXSF
+    movie = open("output_movie.txt", "w") #AXSF
     
     movie.write(f'ANIMSTEPS     {N_steps}\n')
     
@@ -127,7 +127,7 @@ def main():
         
         F_z: List[float] = F[2]
         
-        Et.append(float(E_tot)/(1e-35+9.667887402e-24))#To normalise
+        Et.append(float(E_tot))#To normalise
         
         Pos_i, Vel_i, POINT, LIST = verlet(N, xt[i_step], yt[i_step], zt[i_step], 
                                            v_xt[i_step], v_yt[i_step], v_zt[i_step], 
@@ -147,7 +147,7 @@ def main():
         
         v_zt.append(Vel_i[2])        
         
-        movie = open("output_movie.AXSF", "a") #AXSF
+        movie = open("output_movie.txt", "a") #AXSF
         
         movie.write(f'ATOMS {i_step}\n')
         
@@ -163,14 +163,20 @@ def main():
     
     plt.xlabel(r'$t$ [s]')
     
-    plt.ylabel(r'$(10^{-35}+9.667887402*10^{-24})·E$ [$\epsilon$]')
+    plt.ylabel(r'$E$ [$\epsilon$]')
     
-    plt.title(r'Conservation of energy')
+    plt.title(f'Conservation of energy\n')
     
     plt.legend()
     
     plt.grid(True)
     
     plt.savefig('output_energy_conservation.pdf')
+    
+    print('')
+    
+    print('The simulation is finished.')
+    
+    print('')
     
 main()
