@@ -147,6 +147,34 @@ def main():
         
         v_zt.append(Vel_i[2])        
         
+        
+        plt.figure()
+        
+        
+        ax = plt.axes(projection='3d')
+        
+        ax.scatter3D(Pos_i[0], Pos_i[1], Pos_i[2], c='r', s = 50)
+        
+        ax.set_xlim(2,-3)
+        
+        ax.set_ylim(2,-3)
+        
+        ax.set_zlim(2,-3)
+        
+        ax.set_xlabel('x', labelpad=20)
+        
+        ax.set_ylabel('y', labelpad=20)
+        
+        ax.set_zlabel('z', labelpad=20)
+        
+        ax.set_title(f'Time step {i_step}')
+        
+        ax.grid()
+        
+        
+        plt.savefig(f'Time step {i_step}.png')
+        
+        
         movie = open("output_movie.AXSF", "a") #AXSF
         
         movie.write(f'ATOMS {i_step+1}\n')
