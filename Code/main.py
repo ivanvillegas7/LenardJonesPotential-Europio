@@ -110,7 +110,7 @@ def main():
     
     t: List[float] = np.linspace(0, N_steps*R_tStep, N_steps)
     
-    movie = open("output_movie.AXSF", "w") #AXSF
+    movie = open("output_movie.AXSF", "w")
     
     movie.write(f'ANIMSTEPS     {N_steps}\n')
     
@@ -127,7 +127,7 @@ def main():
         
         F_z: List[float] = F[2]
         
-        Et.append(float(E_tot))#To normalise
+        Et.append(float(E_tot))
         
         Pos_i, Vel_i, POINT, LIST = verlet(N, xt[i_step], yt[i_step], zt[i_step], 
                                            v_xt[i_step], v_yt[i_step], v_zt[i_step], 
@@ -175,7 +175,7 @@ def main():
         plt.savefig(f'Time step {i_step}.png')
         
         
-        movie = open("output_movie.AXSF", "a") #AXSF
+        movie = open("output_movie.AXSF", "a")
         
         movie.write(f'ATOMS {i_step+1}\n')
         
