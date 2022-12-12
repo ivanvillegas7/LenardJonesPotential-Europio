@@ -1,0 +1,131 @@
+format 224
+
+classcanvas 128009 class_ref 128009 // Initialization
+  classdiagramsettings member_max_width 0 end
+  xyz 200 85 2000
+end
+classcanvas 128137 class_ref 128137 // inputs
+  classdiagramsettings member_max_width 0 end
+  xyz 51 83 2000
+end
+classcanvas 128393 class_ref 128393 // LennardJonesPotential
+  classdiagramsettings member_max_width 0 end
+  xyz 397 85 2000
+end
+classcanvas 128403 class_ref 128147 // Dynamics
+  classdiagramsettings member_max_width 0 end
+  xyz 240 252 2000
+end
+classcanvas 128521 class_ref 128521 // Neighbourlist
+  classdiagramsettings member_max_width 0 end
+  xyz 565 85 2000
+end
+classcanvas 129043 class_ref 134675 // Experiment
+  classdiagramsettings member_max_width 0 end
+  xyz 50 277 2000
+end
+classcanvas 130579 class_ref 134803 // State
+  classdiagramsettings member_max_width 0 end
+  xyz 398 266 2000
+end
+classcanvas 131219 class_ref 134931 // ListAtoms
+  classdiagramsettings member_max_width 0 end
+  xyz 608 259 2000
+end
+classcanvas 131475 class_ref 128019 // Atom
+  classdiagramsettings member_max_width 0 end
+  xyz 537 373 2000
+end
+classcanvas 131603 class_ref 135059 // R3Value
+  classdiagramsettings member_max_width 0 end
+  xyz 718 374 2000
+end
+relationcanvas 129427 relation_ref 135443 // <unidirectional association>
+  decenter_begin 85
+  decenter_end 136
+  from ref 128137 z 2001 to ref 128009
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129555 relation_ref 135571 // <unidirectional association>
+  decenter_begin 930
+  from ref 128137 z 2001 to ref 128403
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130067 relation_ref 135955 // <unidirectional association>
+  decenter_begin 61
+  decenter_end 111
+  from ref 128521 z 2001 to ref 128393
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130323 relation_ref 136211 // <unidirectional association>
+  decenter_end 61
+  from ref 128403 z 2001 to ref 129043
+  role_a_pos 162 267 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130707 relation_ref 136339 // <unidirectional association>
+  decenter_begin 63
+  decenter_end 200
+  from ref 128393 z 2001 to ref 130579
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130963 relation_ref 136467 // <unidirectional association>
+  decenter_begin 181
+  decenter_end 230
+  from ref 128403 z 2001 to ref 130579
+  role_a_pos 314 253 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131091 relation_ref 136595 // <unidirectional association>
+  decenter_end 768
+  from ref 128403 z 2001 to ref 130579
+  role_a_pos 359 350 3000 no_role_b
+  multiplicity_a_pos 383 339 3000 no_multiplicity_b
+end
+relationcanvas 131347 relation_ref 136723 // <unidirectional association>
+  decenter_begin 873
+  decenter_end 921
+  from ref 131219 z 2001 to ref 128521
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131731 relation_ref 136851 // <realization>
+  decenter_begin 111
+  decenter_end 111
+  from ref 131475 z 2001 to ref 131603
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131859 relation_ref 136979 // <unidirectional association>
+  decenter_begin 930
+  decenter_end 873
+  from ref 131475 z 2001 to ref 131219
+  no_role_a no_role_b
+  multiplicity_a_pos 704 353 3000 no_multiplicity_b
+end
+relationcanvas 131987 relation_ref 137107 // <unidirectional association>
+  decenter_end 230
+  from ref 131475 z 2001 to ref 130579
+  no_role_a no_role_b
+  multiplicity_a_pos 503 301 3000 no_multiplicity_b
+end
+relationcanvas 132115 relation_ref 143635 // <unidirectional association>
+  decenter_begin 555
+  from ref 131475 z 2001 to point 513 415
+  line 132243 z 2001 to point 515 484
+  line 132371 z 2001 to point 600 484
+  line 132499 z 2001 to ref 131475
+  role_a_pos 612 460 3000 no_role_b
+  multiplicity_a_pos 588 460 3000 no_multiplicity_b
+end
+relationcanvas 132627 relation_ref 143763 // <unidirectional association>
+  decenter_begin 915
+  from ref 128009 z 2001 to ref 130579
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+end

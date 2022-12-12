@@ -1,0 +1,14 @@
+window_sizes 1800 892 450 1343 655 168
+
+diagrams
+  active  classdiagram_ref 128009 // NotIdealGas
+    1343 655 100 A4 0 0
+end
+show_stereotypes
+selected attribute_ref 129161 // FCC_cells
+open
+  class_ref 128137 // inputs
+  class_ref 128393 // LennardJonesPotential
+  class_ref 128521 // Neighbourlist
+end
+end
