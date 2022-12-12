@@ -8,7 +8,7 @@ The simulation will generate a histogram of the velocity in each direction (X, Y
 
 Our generated graphs are located in folder "Plots" and the files are stored in folder "Files".
 
-In folder "BOUML" you can fined de UML diagram which helps visualize the code done.
+In folder "BOUML" you can fined de UML diagram which helps visualize the code done. The Power Point is located inside "NonIdealGas.zip"
 
 Each member of the group has done the following.
 
