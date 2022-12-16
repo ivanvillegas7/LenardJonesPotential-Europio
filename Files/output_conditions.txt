@@ -8,5 +8,7 @@ Sigma: 3.4100000000000006e-10 m
 Epsilon: 119.8 K
 Cutoff Potential: 2.5; in units of sigma
 Cutoff List: 2.7; in units of sigma
-Number of steps: 10 
+Number of steps: 100 
 Reduced time step: 0.005 s
+Mass: 40.0 
+Atomic number: 18.0 
