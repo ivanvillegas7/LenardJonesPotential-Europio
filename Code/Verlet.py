@@ -113,7 +113,7 @@ def verlet_algorithm(N_atoms, x, y, z, vx, vy, vz, Fx, Fy, Fz, D_Time, point,\
         fx_dt, fy_dt, fz_dt = F_dt[0], F_dt[1], F_dt[2]
         
         #Compute the acceleration (t+dt)
-        ax_dt, ay_dt, az_dt = fx_dt, fy_dt, fz_dt
+        ax_dt, ay_dt, az_dt = fx_dt/M, fy_dt/M, fz_dt/M
         
         #Compute the velocities(t+dt)
         vx_dt[i] = vx_dt_h[i] + ax_dt[i]*D_Time/2
