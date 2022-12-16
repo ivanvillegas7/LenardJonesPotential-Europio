@@ -21,3 +21,6 @@ Iván Vilegas - init.py, neighbours.py, 1/2 main.py and GiHub repository.
 Each one has done its respective part of the PowerPoint.
 
 The work has been equitatively distributed.
+
+
+Check 'https://github.com/ivanvillegas7/LenardJonesPotential-Europio' for the most recent version of the code.
