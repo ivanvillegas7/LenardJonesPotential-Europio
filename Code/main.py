@@ -45,8 +45,10 @@ N: int
 R_tStep: float
     
 M: float
+    
+A_N: int
 
-Sig, Eps, N_FCC, R_dens, r_c, r_l, N_steps, R_temp, Width, N, R_tStep, M = inp()
+Sig, Eps, N_FCC, R_dens, r_c, r_l, N_steps, R_temp, Width, N, R_tStep, M, A_N = inp()
 
 from init import initial_position_FCC as i_pos
 
@@ -183,7 +185,7 @@ def main():
         
         for i_atom in range(N):
             
-            movie.write(f'1     {xt[i_step][i_atom]}     {yt[i_step][i_atom]}  {zt[i_step][i_atom]}\n')
+            movie.write(f'{A_N}     {xt[i_step][i_atom]}     {yt[i_step][i_atom]}  {zt[i_step][i_atom]}\n')
             
         movie.close()
     
