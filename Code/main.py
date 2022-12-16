@@ -43,8 +43,10 @@ Width: float
 N: int
 
 R_tStep: float
+    
+M: float
 
-Sig, Eps, N_FCC, R_dens, r_c, r_l, N_steps, R_temp, Width, N, R_tStep = inp()
+Sig, Eps, N_FCC, R_dens, r_c, r_l, N_steps, R_temp, Width, N, R_tStep, M = inp()
 
 from init import initial_position_FCC as i_pos
 
@@ -133,7 +135,7 @@ def main():
                                            v_xt[i_step], v_yt[i_step], v_zt[i_step], 
                                            F_x, F_y, F_z, R_tStep, POINT, LIST,
                                            r_c, r_l, N_steps, Eps, Sig, N_FCC,
-                                           latcon)
+                                           latcon, M)
         
         xt.append(Pos_i[0])
         
