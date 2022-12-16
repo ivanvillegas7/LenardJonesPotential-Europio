@@ -1,6 +1,6 @@
-# Interacting gas - Europio
+# Melting of a solid - Europio
 
-This project simulates the interactions of a gas under a Lennard-Jones potential.
+This project simulates the interactions of a solid under a Lennard-Jones potential.
 
 To run the simulation, download the files y folder "Code" and store it with a file named "input.txt" in the same Python project. Run the main code and the simulation will be played.
 
@@ -10,13 +10,13 @@ Our generated graphs are located in folder "Plots" and the files are stored in f
 
 In folder "BOUML" you can fined de UML diagram which helps visualize the code done.
 
-The Power Point is located inside "NonIdealGas.zip".
+The Power Point is located inside "MolecularDynamics.zip".
 
 Each member of the group has done the following.
 
 Nicolás Gillard - input.py and LennardJones.py
 Rubén Martínez - Verlet.py, 1/2 main.py and tried to make the film with Python.
-Iván Vilegas - init.py, neighbours.py and 1/2 main.py
+Iván Vilegas - init.py, neighbours.py, 1/2 main.py and GiHub repository.
 
 Each one has done its respective part of the PowerPoint.
 
