@@ -39,6 +39,8 @@ def txt_converter():
         Width of the bins in the histogram to compute the pair distribution function.
     -Mass: float
         Atomic mass (in atomic mass units).
+    -A_N: int
+        Atomic number.
 
     """
 
@@ -157,7 +159,7 @@ def txt_converter():
                         Mass = float(words[1])
                         
                     #ATOMIC NUMBER
-                    elif words[0].lower() == "atomic_number" or words[0].lower() == "at_number" or words[0].lower() == "n_at":
+                    elif words[0].lower() == "atomicnumber" or words[0].lower() == "at_number" or words[0].lower() == "n_at":
                         A_N = float(words[1])
 
     except IOError:
