@@ -114,7 +114,7 @@ def main():
     
     t: List[float] = np.linspace(0, N_steps*R_tStep, N_steps)
     
-    movie = open("output_movie.AXSF", "w")
+    movie = open(f"output_movie{N_steps}.AXSF", "w")
     
     movie.write(f'ANIMSTEPS     {N_steps}\n')
     
@@ -139,6 +139,32 @@ def main():
                                            r_c, r_l, N_steps, Eps, Sig, N_FCC,
                                            latcon, M)
         
+        for j in range(N):
+            
+            if Pos_i[0][j] >= -x[0]:
+                
+                Pos_i[0][j] = Pos_i[0][j] - x[0]
+                
+            elif Pos_i[0][j] <= x[0]:
+                
+                Pos_i[0][j] = Pos_i[0][j] + x[0]
+                
+            elif Pos_i[1][j] >= -y[0]:
+                
+                Pos_i[1][j] = Pos_i[1][j] - y[0]
+                
+            elif Pos_i[1][j] <= y[0]:
+                
+                Pos_i[1][j] = Pos_i[1][j] + y[0]
+                
+            elif Pos_i[2][j] >= -z[0]:
+                
+                Pos_i[2][j] = Pos_i[2][j] - z[0]
+                
+            elif Pos_i[2][j] <= z[0]:
+                
+                Pos_i[2][j] = Pos_i[2][j] + z[0]
+        
         xt.append(Pos_i[0])
         
         yt.append(Pos_i[1])
@@ -151,7 +177,7 @@ def main():
         
         v_zt.append(Vel_i[2])        
         
-        
+        '''
         plt.figure()
         
         
@@ -177,9 +203,9 @@ def main():
         
         
         plt.savefig(f'Time step {i_step}.png')
+        '''
         
-        
-        movie = open("output_movie.AXSF", "a")
+        movie = open(f"output_movie{N_steps}.AXSF", "a")
         
         movie.write(f'ATOMS {i_step+1}\n')
         
