@@ -8,3 +8,5 @@ CutoffList                          2.7                     # Cutoff distance f
 NumberOfSteps                       10000                   # Number of steps in the Molecular Dynamic simulations
 ReducedTimeStep                     0.005                   # Reduced time step
 WidthBinPairDistributionFunction    0.1                     # Width of the bins in the histogram to compute the pair distribution function
+Mass                                40                      # Mass of the atom (in atomic units)
+AtomicNumber                        18                      # Atomic number of the element
