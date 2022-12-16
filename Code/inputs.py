@@ -37,6 +37,8 @@ def txt_converter():
         Reduced time step of the molecular dynamic simulation.
     -WidthBinPairDistributionFunction or Width: float
         Width of the bins in the histogram to compute the pair distribution function.
+    -Mass: float
+        Atomic mass (in atomic mass units).
 
     """
 
@@ -74,6 +76,12 @@ def txt_converter():
     
     Width_default                       = 0.1
     Width                               = Width_default
+    
+    Mass_default                        = 40
+    Mass                                = Mass_default
+    
+    A_N_default                         = 18
+    A_N                                 = A_N_default
     
     """
     What it will do is the following: 
@@ -143,6 +151,14 @@ def txt_converter():
                     #REDUCED_TEMPERATURE
                     elif words[0].lower() == "reducedtemperature" or words[0].lower() == "reduced_t":
                         Reduced_temperature = float(words[1])
+                        
+                    #MASS
+                    elif words[0].lower() == "mass":
+                        Mass = float(words[1])
+                        
+                    #ATOMIC NUMBER
+                    elif words[0].lower() == "atomic_number" or words[0].lower() == "at_number" or words[0].lower() == "n_at":
+                        A_N = float(words[1])
 
     except IOError:
         print("The file 'input.txt' does not exist")
@@ -165,6 +181,9 @@ def txt_converter():
         f.write(f'Cutoff List: {CutOffList}; in units of sigma\n')
         f.write(f'Number of steps: {Number_steps} \n')
         f.write(f'Reduced time step: {ReducedTimeStep} s\n')
+        f.write(f'Mass: {Mass} \n')
+        f.write(f'Atomic number: {A_N} \n')
     
     return Sigma, Epsilon, Number_FCC, Reduced_density, CutOffPotential, \
-           CutOffList, Number_steps, Reduced_temperature, Width, Number_of_atoms, ReducedTimeStep
+           CutOffList, Number_steps, Reduced_temperature, Width, Number_of_atoms,\
+           ReducedTimeStep, Mass, A_N
