@@ -15,7 +15,8 @@ from neighbours import Neighbour_List as neig_l
 from LennardJones import potentials
 
 def verlet_algorithm(N_atoms, x, y, z, vx, vy, vz, Fx, Fy, Fz, D_Time, point,\
-                     Neig_list, RC, RL, N_steps, Epsilon, Sigma, N_FCC, latcon):
+                     Neig_list, RC, RL, N_steps, Epsilon, Sigma, N_FCC, latcon,\
+                     M):
     """
     This functions uses the Verlet integration to calculate the trajectories 
     of each particles. It computes the integration of the positions for each 
@@ -57,6 +58,8 @@ def verlet_algorithm(N_atoms, x, y, z, vx, vy, vz, Fx, Fy, Fz, D_Time, point,\
         Variable of the Lennard-Jones potential.
     Sigma: float
         Variable of the Lennard-Jones potential.
+    M: float
+        Mass of the atom.
     
     Returns
     -------
