@@ -23,4 +23,4 @@ Each one has done its respective part of the PowerPoint.
 The work has been equitatively distributed.
 
 
-Check 'https://github.com/ivanvillegas7/LenardJonesPotential-Europio' for the most recent version of the code.
+Check 'https://github.com/ivanvillegas7/LennardJonesPotential-Europio' for the most recent version of the code.
