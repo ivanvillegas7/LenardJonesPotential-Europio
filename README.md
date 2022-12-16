@@ -10,7 +10,7 @@ Our generated graphs are located in folder "Plots" and the files are stored in f
 
 In folder "BOUML" you can fined de UML diagram which helps visualize the code done.
 
-The Power Point is located inside "MolecularDynamics.zip".
+The Power Point is located inside "Presentation.zip".
 
 Each member of the group has done the following.
 
