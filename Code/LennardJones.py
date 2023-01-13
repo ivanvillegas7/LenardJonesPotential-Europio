@@ -129,7 +129,7 @@ def potentials(N, pointer, neighbourlist, x, y, z, r_c, Epsilon, Sigma, v_x, v_y
         K[i]        = ((velocity[i]**2)/2)*K_B/Epsilon
         #Total energy
         E[i]        = V[i] + K[i]
-        E_tot           = E_tot + E[i]
+        E_tot       = E_tot + E[i]
     '''
     #We can save the potential, kinetic and total energy of each atom at every
     #instance to make sure the programm works. We have disabled this option to
